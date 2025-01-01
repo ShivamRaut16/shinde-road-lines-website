@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinde Road Lines - Navbar</title>
+
+  <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Apply custom fonts */
+    body {
+      font-family: 'Quicksand', sans-serif; /* Default body font */
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-link {
+      font-family: 'Lora', serif;
+    }
+
+    /* Navbar Color Palette */
+    .bg-navbar {
+      background-color: #E85C0D; /* Orange */
+    }
+
+    .text-navbar {
+      color: white; /* White text for better visibility */
+    }
+
+    .navbar-link:hover {
+      color: #C7253E; /* Red when hovered */
+    }
+
+    .navbar-link {
+      color: white; /* Use white text for better contrast */
+    }
+
+    .mobile-menu-bg {
+      background-color: #821131; /* Dark Red for mobile menu background */
+    }
+
+    /* Company Name and Tagline */
+    .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .tagline {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.1rem;
+      color: #FABC3F; /* Light Yellow for Tagline */
+    }
+
+    /* "Since 1987" Text */
+    .since-1987 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      color: white;
+      margin-top: 0.2rem;
+    }
+
+    /* Logo image size */
+    .logo {
+      height: 40px; /* Adjusted to fit */
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-navbar shadow-lg">
+    <div class="max-w-screen-xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo Section and Company Info -->
+        <a href="index.html" class="navbar-brand text-navbar text-2xl font-bold flex items-center">
+          <!-- Image logo with class for size -->
+          <img src="/shinde-road-lines-website/assets/images/logo.png" alt="Shinde Road Lines" class="logo mr-2">
+          <div>
+            <div class="company-name">SHINDE Roadlines Pvt. Ltd.</div>
+            <div class="tagline">Assured Safe & On-time Delivery</div>
+            <div class="since-1987">Since 1987</div> <!-- "Since 1987" added here -->
+          </div>
+        </a>
+
+        <!-- Desktop Navbar Links -->
+        <div class="hidden md:flex space-x-8">
+        <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden flex items-center">
+          <button class="text-navbar focus:outline-none" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="space-y-4 px-4 py-2 text-white mobile-menu-bg">
+        <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+
+  <section class="text-gray-600 body-font">
+    <!-- Section 1: Our Facilities -->
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Our Facilities</h2>
+        <p class="text-lg leading-relaxed text-gray-600 mt-4">
+          We provide state-of-the-art facilities to ensure smooth operations and efficient service.
+        </p>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/smart_fleet_cards.jpg" alt="Smart Fleet Cards" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Smart Fleet Cards System</h3>
+            <p class="text-gray-600">
+              For tracking and controlling vehicles' diesel usage.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/fast_tag_system.jpg" alt="Fast Tag System" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">FASTag System</h3>
+            <p class="text-gray-600">
+              For cashless transactions, fuel savings, vehicle tracking, and faster delivery.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/communication_facilities.jpg" alt="Communication Facilities" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Communication Facilities</h3>
+            <p class="text-gray-600">
+              Equipped with online software and full communication support for smooth transport operations.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/substitute_vehicle.jpg" alt="Substitute Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Substitute Vehicles</h3>
+            <p class="text-gray-600">
+              In case of a breakdown, we provide a substitute vehicle immediately.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/gprs_system.jpg" alt="GPRS System" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">GPRS System</h3>
+            <p class="text-gray-600">
+              For tracking and controlling vehicles on highways in real-time.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/insurance.jpg" alt="Insurance" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Insurance Coverage</h3>
+            <p class="text-gray-600">
+              All drivers and office staff are covered by 3 lac medical insurance, and vehicles are insured by Oriental Insurance Co. Pune.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/godown_facility.jpg" alt="Godown Facility" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">24x7 Godown Facility</h3>
+            <p class="text-gray-600">
+              Our godown with loading and unloading facilities is operational 24x7 at various locations.
+            </p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/3 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/maintenance_workshop.jpg" alt="Maintenance Workshop" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">Maintenance Workshop</h3>
+            <p class="text-gray-600">
+              All maintenance activities are carried out in-house by qualified mechanical staff.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <section class="text-gray-600 body-font">
+      <!-- Section 2: Transportation Services -->
+      <div class="container px-5 py-24 mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-900">Transportation Services</h2>
+          <p class="text-lg leading-relaxed text-gray-600 mt-4">
+            We offer a wide range of transportation services for industrial, agricultural, and construction needs.
+          </p>
+        </div>
+        <div class="flex flex-wrap">
+          <div class="lg:w-1/2 md:w-full p-4">
+            <div class="h-full bg-gray-100 p-8 rounded-lg">
+              <img src="path_to_your_image/industrial_steel_materials.jpg" alt="Industrial Steel Materials" class="w-full h-48 object-cover mb-4 rounded">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Industrial Steel Materials & Jobs</h3>
+              <ul class="text-gray-600">
+                <li>MS Round Bars</li>
+                <li>MS Square Bars</li>
+                <li>MS Coils</li>
+                <li>MS Plates</li>
+                <li>Hot Rolled Steel Coils</li>
+                <li>Slitting Coils</li>
+                <li>MS Pipes</li>
+                <li>TMT Bars</li>
+                <li>Heavy Jobs</li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="lg:w-1/2 md:w-full p-4">
+            <div class="h-full bg-gray-100 p-8 rounded-lg">
+              <img src="path_to_your_image/construction_materials.jpg" alt="Construction Materials" class="w-full h-48 object-cover mb-4 rounded">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Construction Materials & Equipment</h3>
+              <ul class="text-gray-600">
+                <li>Blocks</li>
+                <li>Cements & Chemicals</li>
+                <li>Tiles</li>
+                <li>Pick and Carry Crane</li>
+                <li>Crane</li>
+              </ul>
+            </div>
+          </div>
+    
+          <div class="lg:w-1/2 md:w-full p-4">
+            <div class="h-full bg-gray-100 p-8 rounded-lg">
+              <img src="path_to_your_image/agriculture_jobs.jpg" alt="Agriculture Jobs" class="w-full h-48 object-cover mb-4 rounded">
+              <h3 class="text-xl font-semibold text-gray-900 mb-2">Edible Oil & Agriculture Jobs</h3>
+              <ul class="text-gray-600">
+                <li>Edible Oil</li>
+                <li>All Agricultural Equipment</li>
+                <li>Heavy & Small Industrial Jobs and Equipment</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     
+    <!-- Section 3: Vehicles -->
+    <div class="container px-5 py-24 mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-900">Our Vehicles</h2>
+        <p class="text-lg leading-relaxed text-gray-600 mt-4">
+          We offer a fleet of vehicles for different transportation needs with varying capacities.
+        </p>
+      </div>
+      <div class="flex flex-wrap -m-4">
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/6_wheels.jpg" alt="6 Wheels Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">6 Wheels</h3>
+            <p class="text-gray-600">12 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/10_wheels.jpg" alt="10 Wheels Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">10 Wheels</h3>
+            <p class="text-gray-600">20 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/12_wheels.jpg" alt="12 Wheels Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">12 Wheels</h3>
+            <p class="text-gray-600">25 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/14_wheels.jpg" alt="14 Wheels Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">14 Wheels</h3>
+            <p class="text-gray-600">30 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/16_wheels.jpg" alt="16 Wheels Vehicle" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">16 Wheels</h3>
+            <p class="text-gray-600">35 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/10_wheels_odc.jpg" alt="10 Wheels ODC Trucks" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">10 Wheels ODC Trucks</h3>
+            <p class="text-gray-600">20 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/14_wheels_bulker.jpg" alt="14 Wheels Bulker" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">14 Wheels Bulker</h3>
+            <p class="text-gray-600">30 MT capacity</p>
+          </div>
+        </div>
+  
+        <div class="lg:w-1/4 md:w-1/2 p-4">
+          <div class="h-full bg-gray-100 p-8 rounded-lg">
+            <img src="path_to_your_image/16_wheels_bulker.jpg" alt="16 Wheels Bulker" class="w-full h-48 object-cover mb-4 rounded">
+            <h3 class="text-xl font-semibold text-gray-900 mb-2">16 Wheels Bulker</h3>
+            <p class="text-gray-600">35 MT capacity</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Footer Section -->
+<footer class="footer py-8 bg-gray-800 text-white">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="text-center">
+      <p>&copy; 2025 Shinde Roadlines Pvt. Ltd. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://facebook.com" class="text-white hover:text-gray-400" target="_blank">Facebook</a>
+        <a href="https://twitter.com" class="text-white hover:text-gray-400" target="_blank">Twitter</a>
+        <a href="https://linkedin.com" class="text-white hover:text-gray-400" target="_blank">LinkedIn</a>
+        <a href="mailto:" class="text-white hover:text-gray-400">Email</a>
+      </div>
+      <div class="mt-4">
+        <a href="#privacy-policy" class="text-white hover:text-gray-400">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#terms-of-service" class="text-white hover:text-gray-400">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- Script to toggle the mobile menu -->
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+    });
+  </script>
+</body>
+
+</html>

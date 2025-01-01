@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinde Road Lines - Navbar</title>
+
+  <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Apply custom fonts */
+    body {
+      font-family: 'Quicksand', sans-serif; /* Default body font */
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-link {
+      font-family: 'Lora', serif;
+    }
+
+    /* Navbar Color Palette */
+    .bg-navbar {
+      background-color: #E85C0D; /* Orange */
+    }
+
+    .text-navbar {
+      color: white; /* White text for better visibility */
+    }
+
+    .navbar-link:hover {
+      color: #C7253E; /* Red when hovered */
+    }
+
+    .navbar-link {
+      color: white; /* Use white text for better contrast */
+    }
+
+    .mobile-menu-bg {
+      background-color: #821131; /* Dark Red for mobile menu background */
+    }
+
+    /* Company Name and Tagline */
+    .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .tagline {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.1rem;
+      color: #FABC3F; /* Light Yellow for Tagline */
+    }
+
+    /* "Since 1987" Text */
+    .since-1987 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      color: white;
+      margin-top: 0.2rem;
+    }
+
+    /* Logo image size */
+    .logo {
+      height: 40px; /* Adjusted to fit */
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-navbar shadow-lg">
+    <div class="max-w-screen-xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo Section and Company Info -->
+        <a href="index.html" class="navbar-brand text-navbar text-2xl font-bold flex items-center">
+          <!-- Image logo with class for size -->
+          <img src="/shinde-road-lines-website/assets/images/logo.png" alt="Shinde Road Lines" class="logo mr-2">
+          <div>
+            <div class="company-name">SHINDE Roadlines Pvt. Ltd.</div>
+            <div class="tagline">Assured Safe & On-time Delivery</div>
+            <div class="since-1987">Since 1987</div> <!-- "Since 1987" added here -->
+          </div>
+        </a>
+
+        <!-- Desktop Navbar Links -->
+        <div class="hidden md:flex space-x-8">
+          <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden flex items-center">
+          <button class="text-navbar focus:outline-none" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="space-y-4 px-4 py-2 text-white mobile-menu-bg">
+        <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+
+
+  
+  <!-- Script to toggle the mobile menu -->
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+    });
+  </script>
+</body>
+
+</html>

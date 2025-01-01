@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shinde Road Lines - Navbar</title>
+
+  <!-- Google Fonts Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS link -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Apply custom fonts */
+    body {
+      font-family: 'Quicksand', sans-serif; /* Default body font */
+    }
+
+    .navbar-brand {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .navbar-link {
+      font-family: 'Lora', serif;
+    }
+
+    /* Navbar Color Palette */
+    .bg-navbar {
+      background-color: #E85C0D; /* Orange */
+    }
+
+    .text-navbar {
+      color: white; /* White text for better visibility */
+    }
+
+    .navbar-link:hover {
+      color: #C7253E; /* Red when hovered */
+    }
+
+    .navbar-link {
+      color: white; /* Use white text for better contrast */
+    }
+
+    .mobile-menu-bg {
+      background-color: #821131; /* Dark Red for mobile menu background */
+    }
+
+    /* Company Name and Tagline */
+    .company-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .tagline {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.1rem;
+      color: #FABC3F; /* Light Yellow for Tagline */
+    }
+
+    /* "Since 1987" Text */
+    .since-1987 {
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1rem;
+      color: white;
+      margin-top: 0.2rem;
+    }
+
+    /* Logo image size */
+    .logo {
+      height: 40px; /* Adjusted to fit */
+      width: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="bg-navbar shadow-lg">
+    <div class="max-w-screen-xl mx-auto px-4 py-4">
+      <div class="flex items-center justify-between">
+
+        <!-- Logo Section and Company Info -->
+        <a href="index.html" class="navbar-brand text-navbar text-2xl font-bold flex items-center">
+          <!-- Image logo with class for size -->
+          <img src="/shinde-road-lines-website/assets/images/logo.png" alt="Shinde Road Lines" class="logo mr-2">
+          <div>
+            <div class="company-name">SHINDE Roadlines Pvt. Ltd.</div>
+            <div class="tagline">Assured Safe & On-time Delivery</div>
+            <div class="since-1987">Since 1987</div> <!-- "Since 1987" added here -->
+          </div>
+        </a>
+
+        <!-- Desktop Navbar Links -->
+        <div class="hidden md:flex space-x-8">
+        <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Icon -->
+        <div class="md:hidden flex items-center">
+          <button class="text-navbar focus:outline-none" id="mobile-menu-button">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden" id="mobile-menu">
+      <div class="space-y-4 px-4 py-2 text-white mobile-menu-bg">
+        <a href="../index.html" class="navbar-link hover:text-red-600">Home</a>
+        <a href="about-us.html" class="navbar-link hover:text-red-600">About Us</a>
+        <a href="services.html" class="navbar-link hover:text-red-600">Services</a>
+        <a href="fleet.html" class="navbar-link hover:text-red-600">Fleet</a>
+        <a href="request-quote.html" class="navbar-link hover:text-red-600">Request a Quote</a>
+        <a href="contact-us.html" class="navbar-link hover:text-red-600">Contact Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <section class="text-gray-600 body-font relative">
+    <div class="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
+      <!-- Map Section -->
+      <div class="lg:w-2/3 md:w-1/2 bg-gray-300 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+        <iframe width="100%" height="100%" class="absolute inset-0" frameborder="0" title="map" marginheight="0" marginwidth="0" scrolling="no" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.9008947400403!2d73.95125247496215!3d18.488147782599174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2e942efe389a7%3A0x9931f3d19b684621!2sShinde%20towers!5e0!3m2!1sen!2sin!4v1735734845110!5m2!1sen!2sin" style="filter: grayscale(1) contrast(1.2) opacity(0.4);"></iframe>
+        <div class="bg-white relative flex flex-wrap py-6 rounded shadow-md">
+          <div class="lg:w-1/2 px-6">
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">ADDRESS</h2>
+            <p class="mt-1">Shinde Towers, Sr. No. 211, Bhekarinagar, (Rupeenagar), A/p. Phursungi, Tal. Haveli, Pune-Saswad Road, Dist. Pune 412 308</p>
+          </div>
+          <div class="lg:w-1/2 px-6 mt-4 lg:mt-0">
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs">EMAIL</h2>
+            <a href="mailto:shindegoods5454@gmail.com" class="text-red-500 leading-relaxed">shindegoods5454@gmail.com</a>
+            <h2 class="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">PHONE</h2>
+            <p class="leading-relaxed">+91 9970545454, +91 9970656565</p>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Feedback / Inquiry Form Section -->
+      <div class="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+        <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Request a Quote / Inquiry</h2>
+        <p class="leading-relaxed mb-5 text-gray-600">Please fill out the form below to request a quote or ask any questions about our services.</p>
+  
+        <form action="/submit-form" method="POST">
+          <!-- Sub-Company Selection -->
+          <div class="relative mb-4">
+            <label for="subcompany" class="leading-7 text-sm text-gray-600">Select Sub-Company</label>
+            <select id="subcompany" name="subcompany" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+              <option value="Shinde Goods Transport">Shinde Goods Transport</option>
+              <option value="Shinde Roadlines">Shinde Roadlines</option>
+              <option value="Shinde Logistics">Shinde Logistics</option>
+            </select>
+          </div>
+  
+          <!-- Name Input -->
+          <div class="relative mb-4">
+            <label for="name" class="leading-7 text-sm text-gray-600">Full Name</label>
+            <input type="text" id="name" name="name" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+          </div>
+  
+          <!-- Email Input -->
+          <div class="relative mb-4">
+            <label for="email" class="leading-7 text-sm text-gray-600">Email Address</label>
+            <input type="email" id="email" name="email" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out" required>
+          </div>
+  
+          <!-- Message Textarea -->
+          <div class="relative mb-4">
+            <label for="message" class="leading-7 text-sm text-gray-600">Message</label>
+            <textarea id="message" name="message" class="w-full bg-white rounded border border-gray-300 focus:border-red-500 focus:ring-2 focus:ring-red-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out" required></textarea>
+          </div>
+  
+          <!-- Submit Button -->
+          <button type="submit" class="text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg">Submit</button>
+        </form>
+  
+        <p class="text-xs text-gray-500 mt-3">We will get back to you as soon as possible. Your feedback is valuable to us.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+<footer class="footer py-8 bg-gray-800 text-white">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="text-center">
+      <p>&copy; 2025 Shinde Roadlines Pvt. Ltd. All rights reserved.</p>
+      <div class="flex justify-center space-x-6 mt-4">
+        <a href="https://facebook.com" class="text-white hover:text-gray-400" target="_blank">Facebook</a>
+        <a href="https://twitter.com" class="text-white hover:text-gray-400" target="_blank">Twitter</a>
+        <a href="https://linkedin.com" class="text-white hover:text-gray-400" target="_blank">LinkedIn</a>
+        <a href="mailto:" class="text-white hover:text-gray-400">Email</a>
+      </div>
+      <div class="mt-4">
+        <a href="#privacy-policy" class="text-white hover:text-gray-400">Privacy Policy</a>
+        <span class="mx-2">|</span>
+        <a href="#terms-of-service" class="text-white hover:text-gray-400">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+  
+  <!-- Script to toggle the mobile menu -->
+  <script>
+    document.getElementById('mobile-menu-button').addEventListener('click', function () {
+      const mobileMenu = document.getElementById('mobile-menu');
+      mobileMenu.classList.toggle('hidden'); // Toggle visibility of the mobile menu
+    });
+  </script>
+</body>
+
+</html>
